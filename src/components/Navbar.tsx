@@ -9,13 +9,13 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Inicio", path: "/" },
-    { label: "Nosotros", path: "/" },
+    { label: "Productos", path: "/productos" },
     { label: "Servicios", path: "/" },
     { label: "Contacto", path: "/" },
   ];
 
   return (
-    <header className="bg-amber-900 w-full fixed top-0 z-50 shadow-lg backdrop-blur-md">
+    <header className="bg-[#633526] w-full fixed top-0 z-50 shadow-lg backdrop-blur-md">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <div className="flex items-center space-x-4">
           <img
