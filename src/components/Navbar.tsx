@@ -9,20 +9,16 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Inicio", path: "/" },
-    { label: "Productos", path: "/productos" },
+    { label: "Productos", path: "/" },
     { label: "Servicios", path: "/" },
     { label: "Contacto", path: "/" },
   ];
 
   return (
-    <header className="bg-[#633526] w-full fixed top-0 z-50 shadow-lg backdrop-blur-md">
+    <header className="bg-[#4b2314] w-full fixed top-0 z-50 shadow-lg backdrop-blur-md">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <div className="flex items-center space-x-4">
-          <img
-            src="https://innovacioneducativa.upc.edu.pe/wp-content/uploads/2024/06/Educacion-inclusiva-1170x532.jpg"
-            alt="Logo"
-            className="h-10 w-10 rounded-full"
-          />
+          <img src="/logo.jpg" alt="Logo" className="h-12 w-12 rounded-full" />
           <span className="text-white text-lg font-semibold">AromaDC</span>
         </div>
 
@@ -33,19 +29,11 @@ const Navbar = () => {
               <Link
                 key={label}
                 to={path}
-                className="text-md font-medium text-white hover:text-amber-400 hover:underline underline-offset-4 transition-colors "
+                className="text-md font-medium text-white hover:text-[#674f45] hover:underline underline-offset-4 transition-colors "
               >
                 {label}
               </Link>
             ))}
-          </div>
-          <div className="flex items-center space-x-4 ml-4">
-            <Button variant="destructive" asChild>
-              <Link to="/">Iniciar Sesion </Link>
-            </Button>
-            <Button className="bg-amber-950 hover:bg-amber-800 text-white">
-              Registrarse
-            </Button>
           </div>
         </div>
 
@@ -63,28 +51,18 @@ const Navbar = () => {
 
         {/* Mobile Dropdown Menu */}
         {isOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-amber-900 shadow-lg z-50 md:hidden">
+          <div className="absolute top-16 left-0 right-0 bg-[#674f45] shadow-lg z-50 md:hidden">
             <div className="px-4 pt-2 pb-4 space-y-4">
               {navItems.map(({ label, path }) => (
                 <Link
                   key={label}
                   to={path}
                   onClick={toggleMenu}
-                  className="block text-white hover:bg-amber-800 px-4 py-2 rounded-md transition-colors"
+                  className="block text-white hover:bg-[#6e6058] px-4 py-2 rounded-md transition-colors"
                 >
                   {label}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-2 mt-4">
-                <Button variant="destructive" asChild className="w-full">
-                  <Link to="/" onClick={toggleMenu}>
-                    Iniciar Sesion
-                  </Link>
-                </Button>
-                <Button className="bg-amber-950 hover:bg-amber-800 text-white w-full">
-                  Registrarse
-                </Button>
-              </div>
             </div>
           </div>
         )}

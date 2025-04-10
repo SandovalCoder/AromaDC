@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "../app/Layout";
 import Home from "../page/Home";
-import Nosostros from "@/components/Nosostros";
+import Nosostros from "@/page/Nosostros";
 
 const RoutesApp = () => {
   return (
