@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const Hero = () => {
   const features = [
     "Extra",
@@ -37,9 +37,11 @@ const Hero = () => {
                 </Badge>
               ))}
             </div>
-            <Button className="bg-white text-[#4b2314] hover:bg-background/85 border-none rounded-full mt-6">
-              Explorar Catálogo <ArrowRight size={20} />
-            </Button>
+            <Link to="/productos">
+              <Button className="bg-white text-[#4b2314] hover:bg-background/85 border-none rounded-full mt-6">
+                Explorar Catálogo <ArrowRight size={20} />
+              </Button>
+            </Link>
           </div>
           <div className="">
             <img

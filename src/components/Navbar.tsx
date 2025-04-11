@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Inicio", path: "/" },
-    { label: "Productos", path: "/" },
+    { label: "Productos", path: "/productos" },
     { label: "Servicios", path: "/" },
     { label: "Contacto", path: "/" },
   ];
@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <header className="bg-[#4b2314] w-full fixed top-0 z-50 shadow-lg backdrop-blur-md">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
           <img src="/logo.jpg" alt="Logo" className="h-12 w-12 rounded-full" />
           <span className="text-white text-lg font-semibold">AromaDC</span>
         </div>
